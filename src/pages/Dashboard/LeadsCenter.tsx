@@ -1,5 +1,18 @@
+import { useState } from 'react';
 import { FaArrowUp, FaEllipsisV } from 'react-icons/fa';
 const LeadsCenter = () => {
+  const [openRow, setOpenRow] = useState<number | null>(null);
+  const [rowNum, setRowNum] = useState<number | null>(null);
+
+  // Function to toggle the dropdown for a specific row
+  const toggleDropdown = (index: number) => {
+    if (openRow === index) {
+      setOpenRow(null); // Close the dropdown if it's already open
+    } else {
+      setOpenRow(index); // Open the dropdown for the selected row
+    }
+  };
+
   const data = [
     {
       created: '4:00 pm',
@@ -52,69 +65,71 @@ const LeadsCenter = () => {
   ];
   return (
     <>
-      <div className="flex justify-between items-center flex-wrap gap-3">
+      <div className="flex md:justify-between justify-start  items-center flex-wrap gap-3 mt-3">
         <h1 className="text-black text-[30.15px] font-semibold font-['Poppins']">
           Lead Center
         </h1>{' '}
-        <div className="flex items-center  gap-3 flex-wrap">
-          <button className="bg-[#FFBA0A] m-auto  w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
+        <div className="flex justify-start items-start  gap-3 flex-wrap">
+          <button className="bg-[#FFBA0A]   w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
             Leads Notification
           </button>
-          <button className="bg-main m-auto  w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
+          <button className="bg-main  w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
             Add New Lead
           </button>
         </div>
       </div>
-      <div className="flex justify-between  items-center flex-wrap gap-3 mt-6">
+      <div className="flex  justify-start  items-center flex-wrap gap-3 mt-6">
         <h1 className="text-black text-[25.97px] font-bold font-['Poppins']">
           Filter {'>>>'}{' '}
         </h1>
-        <div className="flex items-center gap-3">
-          <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
-            Status
-          </h1>
+        <div className="flex justify-start items-center gap-6 flex-wrap">
+          <div className="flex items-center gap-3 w-full md:w-[350px]">
+            <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
+              Status
+            </h1>
 
-          <div className="relative z-20 md:w-[300px] w-[100%]  bg-[#E2E2E2] dark:bg-form-input">
-            <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
-            <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
-              <option value="">USA</option>
-              <option value="">UK</option>
-              <option value="">Canada</option>
-              <option value="">Status</option>
-            </select>
+            <div className="relative z-20 md:w-[250px] w-[100%]  bg-[#E2E2E2] dark:bg-form-input">
+              <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
+              <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
+                <option value="">USA</option>
+                <option value="">UK</option>
+                <option value="">Canada</option>
+                <option value="">Status</option>
+              </select>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 w-full md:w-[350px]">
+            <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
+              Source
+            </h1>
+
+            <div className="relative z-20 md:w-[250px] w-[100%]  bg-[#E2E2E2] dark:bg-form-input">
+              <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
+              <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
+                <option value="">USA</option>
+                <option value="">UK</option>
+                <option value="">Canada</option>
+                <option value=""> Source</option>
+              </select>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 w-full md:w-[400px]">
+            <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
+              Date Range
+            </h1>
+
+            <div className="relative z-20 md:w-[250px] w-[100%]  bg-[#E2E2E2] dark:bg-form-input">
+              <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
+              <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
+                <option value="">USA</option>
+                <option value="">UK</option>
+                <option value="">Canada</option>
+                <option value="">09/05/2023</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
-            Source
-          </h1>
-
-          <div className="relative z-20 md:w-[300px] w-[100%]  bg-[#E2E2E2] dark:bg-form-input">
-            <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
-            <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
-              <option value="">USA</option>
-              <option value="">UK</option>
-              <option value="">Canada</option>
-              <option value=""> Source</option>
-            </select>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
-            Date Range
-          </h1>
-
-          <div className="relative z-20 md:w-[300px] w-[100%]  bg-[#E2E2E2] dark:bg-form-input">
-            <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
-            <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
-              <option value="">USA</option>
-              <option value="">UK</option>
-              <option value="">Canada</option>
-              <option value="">09/05/2023</option>
-            </select>
-          </div>
-        </div>
-      </div>
+      </div>{' '}
       <div className="flex items-center gap-3 mt-5">
         <h1 className="text-black text-[25.97px] font-bold font-['Poppins']">
           Search
@@ -122,7 +137,7 @@ const LeadsCenter = () => {
         <input
           type="text"
           placeholder="Search with Lead ID, Name, Phone or Email"
-          className="md:w-[50%] w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+          className="md:w-[50%] w-full rounded-lg border-[1.5px] bg-white shado border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
         />
       </div>
       <div className="overflow-x-auto">
@@ -150,41 +165,48 @@ const LeadsCenter = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((d) => (
-              <tr className="">
-                <td className="border-b border-[#eee] py-5  dark:border-strokedark pl-6 ">
-                  <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
-                    {d.created}
-                  </h1>
-                </td>
-                <td className="border-b border-[#eee] py-5  dark:border-strokedark   ">
-                  <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
-                    {d.name}
-                  </h1>
-                </td>
-                <td className="border-b border-[#eee] py-5  dark:border-strokedark   ">
-                  <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
-                    {d.phone}
-                  </h1>
-                </td>
-                <td className="border-b border-[#eee] py-5  dark:border-strokedark  ">
-                  <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
-                    {d.source}
-                  </h1>
-                </td>
-                <td className="border-b border-[#eee] py-5  dark:border-strokedark  ">
-                  <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
-                    {d.email}
-                  </h1>
-                </td>
-                <td className="border-b border-[#eee] py-5  dark:border-strokedark flex items-center gap-3  ">
-                  <button className="bg-[#FFBA0A] m-auto  w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
-                    {d.status}
-                  </button>
-                  <FaEllipsisV />
-                  <FaArrowUp />
-                </td>
-              </tr>
+            {data.map((d, index) => (
+              <>
+                <tr key={index} className="">
+                  <td className="border-b border-[#eee] py-5  dark:border-strokedark pl-6 ">
+                    <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
+                      {d.created}
+                    </h1>
+                  </td>
+                  <td className="border-b border-[#eee] py-5  dark:border-strokedark   ">
+                    <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
+                      {d.name}
+                    </h1>
+                  </td>
+                  <td className="border-b border-[#eee] py-5  dark:border-strokedark   ">
+                    <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
+                      {d.phone}
+                    </h1>
+                  </td>
+                  <td className="border-b border-[#eee] py-5  dark:border-strokedark  ">
+                    <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
+                      {d.source}
+                    </h1>
+                  </td>
+                  <td className="border-b border-[#eee] py-5  dark:border-strokedark  ">
+                    <h1 className=" text-zinc-600 text-[18.84px] font-bold font-['Poppins']">
+                      {d.email}
+                    </h1>
+                  </td>
+                  <td className="border-b border-[#eee] py-5  dark:border-strokedark flex items-center gap-3  ">
+                    <button className="bg-[#FFBA0A] m-auto  w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
+                      {d.status}
+                    </button>
+                    <FaEllipsisV />
+                    <FaArrowUp
+                      onClick={() => {
+                        toggleDropdown(index);
+                        setRowNum(index);
+                      }}
+                    />
+                  </td>
+                </tr>
+              </>
             ))}
           </tbody>
         </table>

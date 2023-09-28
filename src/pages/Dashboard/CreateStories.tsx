@@ -23,12 +23,14 @@ const CreateStories = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2 flex-wrap mt-12">
-          <img src="/storyimg.png" className="w-[250px]" />
-          <img src="/storyimg.png" className="w-[250px]" />
-          <img src="/storyimg.png" className="w-[250px]" />
-          <img src="/storyimg.png" className="w-[250px]" />
-          <img src="/storyimg.png" className="w-[250px]" />
+        <div className="flex justify-center">
+          <div className="flex items-start overflow-x-auto gap-2  mt-12">
+            <img src="/storyimg.png" className="w-[250px]" />
+            <img src="/storyimg.png" className="w-[250px]" />
+            <img src="/storyimg.png" className="w-[250px]" />
+            <img src="/storyimg.png" className="w-[250px]" />
+            <img src="/storyimg.png" className="w-[250px]" />
+          </div>
         </div>
       </div>
       <div className="bg-white w-full   shadow-md p-6 mt-5">

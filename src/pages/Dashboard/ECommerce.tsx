@@ -19,8 +19,8 @@ const ECommerce = () => {
       </h1>
       <div className="grid md:grid-cols-3 grid-cols 1 gap-8">
         <div className="md:col-span-2  ">
-          <div className="flex justify-between items-center flex-wrap ">
-            <div className="w-[300px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4">
+          <div className="flex justify-between items-center gap-4 flex-wrap  ">
+            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
               <div className="flex items-center gap-2">
                 {' '}
                 <img src="/listingico.png" className="w-[70px]" />
@@ -40,7 +40,7 @@ const ECommerce = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4">
+            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
               <div className="flex items-center gap-4">
                 {' '}
                 <img src="/pendingico.png" className="w-[70px]" />
@@ -56,7 +56,7 @@ const ECommerce = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[300px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4">
+            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
               <div className="flex items-center gap-4">
                 {' '}
                 <img src="/ratingico.png" className="w-[70px]" />
@@ -73,7 +73,7 @@ const ECommerce = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white min-h-[500px] mt-6 p-6 ">
+          <div className="bg-white min-h-[500px] mt-6 p-6 shadow ">
             <h1 className=" text-black text-lg font-bold font-['Poppins']">
               Package Details
             </h1>
@@ -88,12 +88,12 @@ const ECommerce = () => {
               </div>
             ))}
           </div>
-          <div className="bg-white min-h-[60vh] mt-6 p-6 ">
+          <div className="bg-white min-h-[60vh] mt-6 p-6 shadow">
             {' '}
             <h1 className=" text-black text-lg font-bold font-['Poppins']">
               My Properties
             </h1>
-            <div className="flex justify-between items-center flex-wrap mt-3 ">
+            <div className="flex md:justify-center justify-start items-center flex-wrap mt-3 gap-10 ">
               <div>
                 <label className="mb-3 block text-black dark:text-white">
                   Search
@@ -437,8 +437,8 @@ const ECommerce = () => {
           </div>
         </div>
         <div>
-          <div className=" h-[100px] bg-white rounded-md p-6 flex justify-start my-4">
-            <div className="flex items-center gap-8">
+          <div className=" h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
+            <div className="flex items-center gap-8 ">
               {' '}
               <img src="/reviewico.png" className="w-[70px]" />
               <div className="flex flex-col items-start gap-2">
@@ -453,7 +453,7 @@ const ECommerce = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white p-4 mt-4">
+          <div className="bg-white p-4 mt-4 shadow">
             <h1 className=" text-black text-lg font-bold font-['Poppins']">
               Messages
             </h1>
