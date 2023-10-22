@@ -79,12 +79,12 @@ const LeadsCenter = () => {
         </div>
       </div>
       <div className="flex  justify-start  items-center flex-wrap gap-3 mt-6">
-        <h1 className="text-black text-[25.97px] font-bold font-['Poppins']">
+        <h1 className="text-black text-[25.97px] font-bold hidden md:block font-['Poppins']">
           Filter {'>>>'}{' '}
         </h1>
         <div className="flex justify-start items-center gap-6 flex-wrap">
           <div className="flex items-center gap-3 w-full md:w-[350px]">
-            <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
+            <h1 className=" text-black hidden md:block text-lg md:text-[20.93px]  font-normal font-['Poppins']">
               Status
             </h1>
 
@@ -99,7 +99,7 @@ const LeadsCenter = () => {
             </div>
           </div>
           <div className="flex items-center gap-3 w-full md:w-[350px]">
-            <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
+            <h1 className=" text-black hidden md:block text-lg md:text-[20.93px] font-normal font-['Poppins']">
               Source
             </h1>
 
@@ -114,7 +114,7 @@ const LeadsCenter = () => {
             </div>
           </div>
           <div className="flex items-center gap-3 w-full md:w-[400px]">
-            <h1 className=" text-black text-[20.93px] font-normal font-['Poppins']">
+            <h1 className=" text-black hidden md:block text-[20.93px] font-normal font-['Poppins']">
               Date Range
             </h1>
 

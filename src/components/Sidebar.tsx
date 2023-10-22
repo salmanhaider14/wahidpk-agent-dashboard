@@ -374,32 +374,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   </div>
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
-                  }`}
-                >
-                  <div className="flex items-center gap-4">
-                    <BsSearch size={22} className="text-gray-500" />
-                    Save Search
-                  </div>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
-                  }`}
-                >
-                  <div className="flex items-center gap-4">
-                    <BsHeart size={22} className="text-gray-500" />
-                    My Favorite
-                  </div>
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink
                   to="/profile"
@@ -413,19 +388,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   </div>
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
-                  }`}
-                >
-                  <div className="flex items-center gap-4">
-                    <BsGear size={22} className="text-gray-500" />
-                    Change Password
-                  </div>
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink
                   to="/profile"

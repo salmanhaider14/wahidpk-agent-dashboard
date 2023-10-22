@@ -25,11 +25,11 @@ const CreateStories = () => {
         </div>
         <div className="flex justify-center">
           <div className="flex items-start overflow-x-auto gap-2  mt-12">
-            <img src="/storyimg.png" className="w-[250px]" />
-            <img src="/storyimg.png" className="w-[250px]" />
-            <img src="/storyimg.png" className="w-[250px]" />
-            <img src="/storyimg.png" className="w-[250px]" />
-            <img src="/storyimg.png" className="w-[250px]" />
+            <img src="/storyimg.png" className="w-[150px] md:w-[250px]" />
+            <img src="/storyimg.png" className="w-[150px] md:w-[250px]" />
+            <img src="/storyimg.png" className="w-[150px] md:w-[250px]" />
+            <img src="/storyimg.png" className="w-[150px] md:w-[250px]" />
+            <img src="/storyimg.png" className="w-[150px] md:w-[250px]" />
           </div>
         </div>
       </div>
@@ -91,13 +91,13 @@ const CreateStories = () => {
             </div>
           </div>
           <div className="flex justify-between items-center flex-wrap gap-7">
-            <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-center gap-4 ">
               {' '}
               <div>
                 <label className="mb-3 font-bold block text-black dark:text-white">
                   Label
                 </label>
-                <button className="bg-main w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
+                <button className="bg-main w-[100px] md:w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
                   Rent
                 </button>
               </div>
@@ -105,7 +105,7 @@ const CreateStories = () => {
                 <label className="mb-3 font-bold block text-black dark:text-white">
                   Label
                 </label>
-                <button className="bg-white w-[200px] border h-56px rounded-lg p-3 flex justify-center items-center font-bold text-black">
+                <button className="bg-white w-[100px] md:w-[200px] border h-56px rounded-lg p-3 flex justify-center items-center font-bold text-black">
                   For Sale
                 </button>
               </div>

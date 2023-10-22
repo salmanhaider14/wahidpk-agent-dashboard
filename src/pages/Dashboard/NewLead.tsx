@@ -1,9 +1,6 @@
 const NewLead = () => {
   return (
     <>
-      <h1 className="text-zinc-600 text-[30.70px] text-center font-semibold font-['Poppins'] leading-[100.55px]">
-        Add New Lead popup
-      </h1>
       <div className="max-w-[700px] m-auto  flex flex-col items-start gap-6  p-6 bg-white shadow-lg rounded-xl border">
         <div className="flex items-center gap-2">
           {' '}
@@ -70,6 +67,9 @@ const NewLead = () => {
           className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
         ></textarea>
       </div>
+      <button className="bg-main m-auto mt-7 w-[200px] h-56px rounded-lg p-3 flex justify-center items-center font-bold text-white">
+        Add Lead
+      </button>
     </>
   );
 };

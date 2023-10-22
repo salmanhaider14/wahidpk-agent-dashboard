@@ -1,6 +1,6 @@
 const ECommerce = () => {
   const packageDetails = [
-    { heading1: 'Your Current Package', heading2: 'Platinum Package' },
+    { heading1: 'Current Package', heading2: 'Platinum' },
     { heading1: 'Total Listings', heading2: '100' },
     { heading1: 'Remaining Listings', heading2: '100' },
     { heading1: 'Supreme Plus Credits', heading2: '100' },
@@ -19,8 +19,8 @@ const ECommerce = () => {
       </h1>
       <div className="grid md:grid-cols-3 grid-cols 1 gap-8">
         <div className="md:col-span-2  ">
-          <div className="flex justify-between items-center gap-4 flex-wrap  ">
-            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
+          <div className="flex justify-between items-center md:gap-4 flex-wrap  ">
+            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-1 md:my-4 shadow">
               <div className="flex items-center gap-2">
                 {' '}
                 <img src="/listingico.png" className="w-[70px]" />
@@ -40,7 +40,7 @@ const ECommerce = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
+            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-1 md:my-4 shadow">
               <div className="flex items-center gap-4">
                 {' '}
                 <img src="/pendingico.png" className="w-[70px]" />
@@ -56,7 +56,7 @@ const ECommerce = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
+            <div className="w-[270px] h-[100px] bg-white rounded-md p-6 flex justify-start my-1 md:my-4 shadow">
               <div className="flex items-center gap-4">
                 {' '}
                 <img src="/ratingico.png" className="w-[70px]" />
@@ -78,7 +78,7 @@ const ECommerce = () => {
               Package Details
             </h1>
             {packageDetails.map((pkg) => (
-              <div className="flex md:flex-row flex-col  justify-between items-start flex-wrap">
+              <div className="flex flex-row  justify-between items-start ">
                 <h1 className="text-black text-[16.85px] font-semibold font-['Poppins'] leading-[55.28px]">
                   {pkg.heading1}
                 </h1>
@@ -94,51 +94,56 @@ const ECommerce = () => {
               My Properties
             </h1>
             <div className="flex md:justify-center justify-start items-center flex-wrap mt-3 gap-10 ">
-              <div>
-                <label className="mb-3 block text-black dark:text-white">
-                  Search
-                </label>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                />
-              </div>
-              <div>
-                <label className="mb-3 block text-black dark:text-white">
-                  From Date
-                </label>
-                <div className="relative">
+              <div className="flex items-center gap-2">
+                {' '}
+                <div>
+                  <label className="mb-3 block text-black dark:text-white">
+                    Search
+                  </label>
                   <input
-                    type="date"
-                    placeholder="From Date"
-                    className="custom-input-date custom-input-date-1 w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                    type="text"
+                    placeholder="Search"
+                    className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
                   />
                 </div>
-              </div>
-              <div>
-                <label className="mb-3 block text-black dark:text-white">
-                  To Date
-                </label>
-                <div className="relative">
-                  <input
-                    type="date"
-                    placeholder="From Date"
-                    className="custom-input-date custom-input-date-1 w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                  />
+                <div>
+                  <label className="mb-3 block text-black dark:text-white">
+                    Status
+                  </label>
+                  <div className="relative z-20 bg-white dark:bg-form-input">
+                    <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
+                    <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
+                      <option value="">USA</option>
+                      <option value="">UK</option>
+                      <option value="">Canada</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div>
-                <label className="mb-3 block text-black dark:text-white">
-                  Status
-                </label>
-                <div className="relative z-20 bg-white dark:bg-form-input">
-                  <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2"></span>
-                  <select className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
-                    <option value="">USA</option>
-                    <option value="">UK</option>
-                    <option value="">Canada</option>
-                  </select>
+              <div className="flex items-center gap-2">
+                <div>
+                  <label className="mb-3 block text-black dark:text-white">
+                    From Date
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="date"
+                      placeholder="From Date"
+                      className="custom-input-date custom-input-date-1  rounded border-[1.5px] border-stroke bg-transparent py-3  font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-3 block text-black dark:text-white">
+                    To Date
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="date"
+                      placeholder="From Date"
+                      className="custom-input-date custom-input-date-1 w-full rounded border-[1.5px] border-stroke bg-transparent py-3  font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -437,7 +442,7 @@ const ECommerce = () => {
           </div>
         </div>
         <div>
-          <div className=" h-[100px] bg-white rounded-md p-6 flex justify-start my-4 shadow">
+          <div className=" h-[100px] bg-white rounded-md p-6 flex justify-start my-1 md:my-4 shadow">
             <div className="flex items-center gap-8 ">
               {' '}
               <img src="/reviewico.png" className="w-[70px]" />
